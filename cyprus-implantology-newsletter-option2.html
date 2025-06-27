@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyprus Academy of Implantology Newsletter - Option 2</title>
+    <style>
+        :root {
+            --primary-teal: #0d9488;
+            --secondary-teal: #14b8a6;
+            --light-teal: #5eead4;
+            --accent-orange: #ea580c;
+            --light-orange: #fb923c;
+            --dark-slate: #0f172a;
+            --medium-slate: #334155;
+            --light-slate: #64748b;
+            --warm-gray: #f8fafc;
+            --white: #ffffff;
+            --cream: #fefcf3;
+            --border-light: #e2e8f0;
+            --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-moderate: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-strong: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-slate);
+            background: var(--warm-gray);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: var(--shadow-strong);
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+            color: var(--dark-slate);
+            padding: 80px 50px 60px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid var(--primary-teal);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-orange) 0%, var(--light-orange) 100%);
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 40px;
+            filter: brightness(0) saturate(100%) invert(7%) sepia(15%) saturate(5969%) hue-rotate(202deg) brightness(96%) contrast(106%);
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.03);
+            filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(162deg) brightness(118%) contrast(119%);
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark-slate);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .header p {
+            font-size: 1.4rem;
+            color: var(--medium-slate);
+            font-weight: 400;
+            margin-bottom: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        .slogan {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary-teal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .slogan::before,
+        .slogan::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: var(--accent-orange);
+        }
+
+        .slogan::before {
+            left: -60px;
+        }
+
+        .slogan::after {
+            right: -60px;
+        }
+
+        .content {
+            padding: 70px 50px;
+            background: var(--white);
+        }
+
+        .intro {
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.05) 0%, rgba(234, 88, 12, 0.05) 100%);
+            padding: 50px;
+            margin-bottom: 70px;
+            border-left: 8px solid var(--primary-teal);
+            position: relative;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--light-teal) 0%, var(--secondary-teal) 100%);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .intro h2 {
+            color: var(--dark-slate);
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--medium-slate);
+        }
+
+        .program-highlights {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            color: var(--dark-slate);
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent-orange);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--light-slate);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .highlights-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .highlight-card {
+            background: var(--white);
+            padding: 40px;
+            border: 2px solid var(--border-light);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.02) 0%, rgba(234, 88, 12, 0.02) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .highlight-card:hover::before {
+            opacity: 1;
+        }
+
+        .highlight-card:hover {
+            border-color: var(--primary-teal);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .highlight-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+            line-height: 1;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .highlight-card h3 {
+            color: var(--dark-slate);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        .highlight-card p {
+            color: var(--medium-slate);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faculty-section {
+            margin-bottom: 80px;
+        }
+
+        .faculty-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faculty-intro h2 {
+            color: var(--dark-slate);
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .faculty-intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent-orange);
+            border-radius: 2px;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .faculty-card {
+            background: var(--white);
+            border: 2px solid var(--border-light);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .faculty-card:hover {
+            border-color: var(--primary-teal);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .faculty-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .faculty-card:hover .faculty-image {
+            transform: scale(1.05);
+        }
+
+        .faculty-details {
+            padding: 30px;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .faculty-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-slate);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .faculty-role {
+            font-size: 1rem;
+            color: var(--light-slate);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark-slate) 0%, var(--medium-slate) 100%);
+            color: var(--white);
+            padding: 80px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .contact-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(234, 88, 12, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .contact-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .contact-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--light-teal);
+        }
+
+        .contact-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-orange) 100%);
+            color: var(--white);
+            padding: 20px 50px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(234, 88, 12, 0.3);
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, var(--light-orange) 0%, #fdba74 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(234, 88, 12, 0.4);
+        }
+
+        .footer {
+            background: var(--dark-slate);
+            color: var(--white);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .footer p:last-child {
+            margin-bottom: 0;
+            color: var(--light-teal);
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .highlight-card {
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        .highlight-card:nth-child(1) { animation-delay: 0.1s; }
+        .highlight-card:nth-child(2) { animation-delay: 0.2s; }
+        .highlight-card:nth-child(3) { animation-delay: 0.3s; }
+        .highlight-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+            }
+            
+            .header {
+                padding: 50px 30px 40px;
+            }
+            
+            .header h1 {
+                font-size: 2.4rem;
+            }
+            
+            .logo {
+                width: 140px;
+            }
+            
+            .content {
+                padding: 50px 30px;
+            }
+            
+            .highlights-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .faculty-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 25px;
+            }
+            
+            .faculty-image {
+                height: 200px;
+            }
+
+            .contact-section {
+                padding: 60px 30px;
+            }
+
+            .contact-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .slogan::before,
+            .slogan::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 120px;
+            }
+            
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/logo-white4-png.webp" alt="Cyprus Academy of Implantology Logo" class="logo">
+            <h1>Cyprus Academy of Implantology</h1>
+            <p>Excellence in Dental Implantology Education</p>
+            <div class="slogan">Advancing Dentistry, Transforming Lives</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Introduction -->
+            <section class="intro">
+                <h2>Cyprus's Premier Implantology Program</h2>
+                <p>The Cyprus Academy of Implantology stands as the first and most comprehensive implantology education program in Cyprus, designed specifically for dentists seeking to master the art and science of dental implantology. Our academy represents a groundbreaking initiative in postgraduate dental education, offering an unparalleled learning experience that combines theoretical excellence with hands-on practical training.</p>
+            </section>
+
+            <!-- Program Highlights -->
+            <section class="program-highlights">
+                <div class="section-header">
+                    <h2>Program Excellence</h2>
+                    <p>Discover what makes our program the leading choice for dental professionals in Cyprus and beyond.</p>
+                </div>
+                <div class="highlights-container">
+                    <div class="highlight-card">
+                        <div class="highlight-number">378</div>
+                        <h3>Hours of Training</h3>
+                        <p>Comprehensive theoretical and practical program covering all aspects of oral implantology with hands-on experience.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-number">100%</div>
+                        <h3>English Language</h3>
+                        <p>All courses conducted in English to ensure international accessibility and maintain global standards.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-number">13+</div>
+                        <h3>Expert Faculty</h3>
+                        <p>Learn from renowned specialists in prosthodontics, oral surgery, and implantology from across Europe.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-number">1st</div>
+                        <h3>In Cyprus</h3>
+                        <p>The first comprehensive implantology education program established in Cyprus for dental professionals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Faculty Section -->
+            <section class="faculty-section">
+                <div class="faculty-intro">
+                    <h2>Distinguished Faculty</h2>
+                </div>
+                <div class="faculty-grid">
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-1.webp" alt="Dr Nicos Papadopoulos" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Nicos Papadopoulos</div>
+                            <div class="faculty-role">MSc in Oral Implantology, Course Director</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-2.webp" alt="Dr Panos Kessaris" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Panos Kessaris</div>
+                            <div class="faculty-role">Oral and Maxillofacial Surgery, Scientific Program Director</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-8.webp" alt="Professor Marco Esposito" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Professor Marco Esposito</div>
+                            <div class="faculty-role">Oral Surgery & Dental Implantology</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/06/donos_nicolaos1.webp" alt="Dr Donos Nikolaos" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Donos Nikolaos</div>
+                            <div class="faculty-role">Director of Research, Professor & Chair of Periodontology and Implant Dentistry</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-5.webp" alt="Dr Stratis (Efstratios) Papazoglou" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Stratis (Efstratios) Papazoglou</div>
+                            <div class="faculty-role">Prosthodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-9.webp" alt="Dr Spyridon I. Vassilopoulos" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Spyridon I. Vassilopoulos</div>
+                            <div class="faculty-role">Periodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-4.webp" alt="Dr Dimitris Tasakos" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Dimitris Tasakos</div>
+                            <div class="faculty-role">Oral Implantology</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-12.webp" alt="Dr Andreas Artopoulos" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Andreas Artopoulos</div>
+                            <div class="faculty-role">Maxillofacial Prosthodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-14.webp" alt="Dr Christos Theocharides" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Christos Theocharides</div>
+                            <div class="faculty-role">Prosthodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-3.webp" alt="Dr Alexandros Panayiotou" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Alexandros Panayiotou</div>
+                            <div class="faculty-role">Prosthodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-11.webp" alt="Dr Harris Georgiou" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Harris Georgiou</div>
+                            <div class="faculty-role">Prosthodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-13.webp" alt="Dr Petros Papacosta" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Dr Petros Papacosta</div>
+                            <div class="faculty-role">Prosthodontics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://www.caoimplantology.com/wp-content/uploads/2025/01/speakers-6.webp" alt="Farmakis Evangelos" class="faculty-image">
+                        <div class="faculty-details">
+                            <div class="faculty-name">Farmakis Evangelos</div>
+                            <div class="faculty-role">Eddy DDS, MDentSci (Leeds) Paediatric Dentist</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Ready to Transform Your Practice?</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>contact@caoimplantology.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>+357 99990080<br>+357 99606565</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🎓</div>
+                    <h3>Program</h3>
+                    <p>378 Hours<br>English Language</p>
+                </div>
+            </div>
+            <a href="https://www.caoimplantology.com/application/" class="cta-button">Apply Now</a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Cyprus Academy of Implantology. All rights reserved.</p>
+            <p>The first comprehensive implantology program in Cyprus</p>
+        </footer>
+    </div>
+</body>
+</html> 
